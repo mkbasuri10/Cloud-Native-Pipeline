@@ -1,0 +1,13 @@
+version: 2
+
+exposures:
+  - name: sales_dashboard
+    type: dashboard
+    maturity: high
+    owner:
+      name: Manoj
+      email: manoj@example.com
+    depends_on:
+      - ref('fct_orders')
+      - ref('dim_customers')
+      - ref('dim_products')

@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw
+    database: POC_DB          # change if needed
+    schema: RAW               # change if needed
+    tables:
+      - name: customers
+      - name: orders
+        loaded_at_field: updated_at
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
+      - name: order_items
+      - name: products

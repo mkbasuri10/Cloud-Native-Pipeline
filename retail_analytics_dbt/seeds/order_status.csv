@@ -1,0 +1,4 @@
+status,description
+NEW,New Order
+SHIPPED,Shipped
+CANCELLED,Cancelled
